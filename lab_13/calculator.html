@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>calculator</title>
+    <script src = "operations.js"></script>
+    <style>
+      #output{
+        display: flex;
+        height: 50px;
+        
+        border: solid 2px;
+        border-color: grey;
+        border-radius : 5px;
+        margin-bottom: 2px;
+        color: white;
+        text-align: right;
+      }
+
+      #buttons{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        border: solid 2px;
+        border-radius: 5px;
+        border-color: grey;
+      }
+
+      .button{
+        display: inline-block;
+        margin: 1px;
+        padding: 30px 10px;
+        background-color: red;
+        text-align: center;
+        font-size: 18px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id = "output"></div>
+    <div id = "buttons">
+      <div class = button onclick = "add_to_expression(7)">7</div>
+      <div class = button onclick = "add_to_expression(8)">8</div>
+      <div class = button onclick = "add_to_expression(9)">9</div>
+      <div class = button onclick = "add_to_expression('*')">*</div>
+      <div class = button onclick = "add_to_expression(4)">4</div>
+      <div class = button onclick = "add_to_expression(5)">5</div>
+      <div class = button onclick = "add_to_expression(6)">6</div>
+      <div class = button onclick = "add_to_expression('+')">+</div>
+      <div class = button onclick = "add_to_expression(1)">1</div>
+      <div class = button onclick = "add_to_expression(2)">2</div>
+      <div class = button onclick = "add_to_expression(3)">3</div>
+      <div class = button onclick = "add_to_expression('-')">-</div>
+      <div class = button onclick = "add_to_expression('/')">/</div>
+      <div class = button onclick = "add_to_expression(0)">0</div>
+      <div class = button onclick = back()>back</div>
+      <div class = button onclick = equals_to()>=</div>
+      <div class = button onclick = reset()>C</div>
+    </div>
+  </body>
+</html>

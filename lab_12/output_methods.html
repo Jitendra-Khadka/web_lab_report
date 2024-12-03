@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>output methods</title>
+  </head>
+
+  <body>
+    <p id = "hello"></p>
+    <button onclick = all_in_one()>All in One</button>
+    <button onclick = destroy()>call write</button>
+    <script>
+      function all_in_one(){
+        console.log("method console.log printing this message ");
+        alert("method alert is printing this message");
+        document.getElementById("hello").innerHTML = "method innerHTML is printing this message";
+      }
+
+      function destroy(){
+        document.write("method document.write is printing this message");
+      }
+    </script>
+  </body>
+</html>

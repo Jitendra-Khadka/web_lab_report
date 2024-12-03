@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Events</title>
+    <style>
+      #load_image{
+        display: none;
+      }
+
+      #change_color{
+        height: 100px;
+        width: 100px;
+        background-color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <img id = "load_image" src = "https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" alt = "img" height = "100px">
+
+    <div id  = "change_color">onmouseover event</div>
+
+    <button id = "show_content">Click me</button>
+
+    <script>
+
+      const  button = document.getElementById("show_content");
+      const mouse_over = document.getElementById("change_color");
+      
+      window.onload = function(){
+        document.getElementById("load_image").style.animationDelay = "10s";
+        document.getElementById("load_image").style.display = "block";
+      }
+    
+      button.onclick = function(){
+        alert("onclick event triggered");
+      }
+
+      mouse_over.onmouseover = function(){
+        document.getElementById("change_color").style.backgroundColor = "pink";
+      }
+    </script>
+  </body>
+</html>

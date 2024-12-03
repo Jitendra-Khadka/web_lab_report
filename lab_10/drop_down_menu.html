@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title>Drop down on navigation bar</title>
+    <style>
+      nav{
+        justify-content: center;
+        background-color: black;
+        
+      }
+
+      .navbar{
+        padding: 20px;
+        display: flex;
+        list-style-type: none;
+      }
+
+      .navbar select{
+        display: inline-block;
+        margin: 10px 17px;
+        padding: 10px 20px;
+        border: none;
+        color: white;
+        font-size: 16px;
+        background-color: black;
+        
+      }
+
+
+      .navbar select:hover{
+        background-color: red;
+
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <ul class = "navbar">
+        <li>
+          <select name="Tutorial" id="tutorial">
+            <option value="" disabled selected>Tutorial</option>
+            <option value="html">Html</option>
+            <option value="css">Css</option>
+            <option value="js">Js</option>
+          </select>
+        </li>
+          
+        <li>
+          <select name="Exercises" id="tutorial">
+            <option value="" disabled selected>Exercies</option>
+            <option value="html_exercies">Html exercies</option>
+            <option value="css_exercies">Css exercies</option>
+            <option value="js_exercies">Js exercies</option>
+          </select>
+        </li>
+
+        <li>
+          <select name="Certificate" id="tutorial">
+            <option value="" disabled selected>Certicficates</option>
+            <option value="html_certificate">Html certificate</option>
+            <option value="css_certificate">Css certificate</option>
+            <option value="js_certificate">Js certificate</option>
+          </select>
+        </li>
+
+      </ul>
+    </nav>
+  </body>
+</html>

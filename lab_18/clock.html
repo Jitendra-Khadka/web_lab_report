@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Clock</title>
+    <style>
+      p{
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      #clock{
+        display: flex;
+        justify-content: start;
+      }
+    </style>
+  </head>
+
+  <body>
+    Clock
+    <div id = "clock">
+      <p id = "hour"></p>
+      <p id = "min"></p>
+      <p id = "sec"></p>
+    </div>
+
+    <script>
+      function time(){
+        let date = new Date();
+        let hour = date.getHours() +" : ";
+        let min = date.getMinutes() +" : ";
+        let sec = date.getSeconds();
+
+        document.getElementById("hour").innerHTML = hour;
+        document.getElementById("min").innerHTML = min;
+        document.getElementById("sec").innerHTML = sec;
+
+      }
+
+      setInterval(time,1000);
+    </script>
+
+
+  </body>
+</html>

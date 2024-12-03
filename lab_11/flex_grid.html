@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>media query</title>
+    <style>
+
+      #flex_ex{
+          display: flex;
+          flex-direction: column;
+      }
+
+      #grid_container{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr;
+      }
+
+      
+
+      @media(min-width: 600px){
+        #flex_ex{
+          flex-direction: row;
+        }
+
+        #grid_container{
+          grid-template-columns: repeat(2,1fr);
+        }
+      }
+
+
+      .item{
+        background-color: orange;
+        font-size: 18;
+        display: inline-block;
+        margin: 20px;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .grid_item{
+        background-color: orange;
+        font-size: 18;
+        display: inline-block;
+        margin: 20px;
+        padding: 20px;
+        text-align: center;
+      }
+
+      
+    </style>
+  </head>
+
+  <body>
+
+    <p>Implemting media query to flex-box</p>
+    <div id = "flex_ex">
+      <div class = 'item'>flex-box 1</div>
+      <div class = 'item'>flex-box 2</div>
+    </div>
+
+    <p>Implemting media query to grid</p>
+    <div id = "grid_container">
+      <div class = "grid_item">Grid 1</div>
+      <div class = "grid_item">Grid 2</div>
+    </div>
+
+  </body>
+</html>

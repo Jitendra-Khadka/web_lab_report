@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Append and prepend</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <p id = "list">apple</p>
+
+    <button id = "append">Append</button>
+    <button id = "prepend">Prepend</button>
+
+    <script>
+      $(document).ready(function(){
+        $("#append").click(function(){
+          $("#list").append("banana");
+        })
+
+        $("#prepend").click(function(){
+          $("#list").prepend("orange");
+        })
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>jquery effects</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <p> This paragraph is injected by jquery virus</p>
+    <button id = "hide">Hide text</button>
+    <button id = "show">Show text</button><br>
+    <button id = "fade_in">Fade in</button>
+    <button id = "fade_out">Fade out</button><br>
+
+    <button id = "slide_up">Slide up</button>
+    <button id = "slide_down">Slide down</button>
+
+      <script>
+        $(document).ready(function(){
+          $("#hide").click(function(){
+            $("p").hide();
+          })
+
+          $("#show").click(function(){
+            $("p").show();
+          })
+
+          $("#fade_in").click(function(){
+            $("p").fadeIn(3000);
+          })
+
+          $("#fade_out").click(function(){
+            $("p").fadeOut(3000);
+          })
+
+          $("#slide_up").click(function(){
+            $("p").slideUp();
+          })
+
+          $("#slide_down").click(function(){
+            $("p").slideDown(3000);
+          })
+
+        })
+    </script>
+  </body>
+</html>

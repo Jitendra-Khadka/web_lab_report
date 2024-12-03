@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Set_time</title>
+    <style>
+      .clock{
+        display: flex;
+        justify-content: start;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <button onclick = "trigger_timeout()">Display text in five second</button>
+    <p id = "delayed_text"></p>
+    <div class = "clock">
+      <p id  = "hour"></p>
+      <p id= "min" ></p>
+      <p id = "sec"></p>
+    </div>
+    <script>
+      function showText(){
+        document.getElementById("delayed_text").innerHTML = "Hello world five second is over";
+      }
+
+      function timer(){
+        let date = new Date();
+        let hour = date.getHours() + " : ";
+        let min = date.getMinutes() + " : ";
+        let sec = date.getSeconds();
+        document.getElementById("hour").innerHTML = hour;
+        document.getElementById("min").innerHTML = min;
+        document.getElementById("sec").innerHTML = sec;
+      }
+
+      function trigger_timeout(){
+        setInterval(timer,1000);
+        setTimeout(showText,5000);
+
+      }
+    </script>
+  </body>
+</html>

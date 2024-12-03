@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Form</title>
+    <style>
+      #form{
+        display: flelx;
+        justify-content: start;
+      }
+    </style>
+  </head>
+  <body>
+    <div id = form>
+      <label for="name">Name</label>
+      <input type="text" id = "name"><br><br>
+      <label for="surname">Surname</label>
+      <input type="text" id = "surname">
+      <input type="submit" onclick = "submit()">
+    </div>
+
+    <script>
+      function submit(){
+        //event.preventDefault();
+        name = document.getElementById("name").value;
+        surname = document.getElementById("surname").value;
+        reg = /^[A-Z]+[a-z]*$/;
+        
+        if(!reg.test(name) || !reg.test(surname)){
+          alert("Grammer is not correct");
+        }
+        else{
+          alert("Correct grammer");
+        }
+      }
+    </script>
+  </body>
+</html>
